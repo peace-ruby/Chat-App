@@ -3,25 +3,24 @@ import EmojiPicker from "emoji-picker-react";
 
 export default function Chat() {
   const [users] = useState([
-    { id: 1, name: "Henry Boyd" },
-    { id: 2, name: "Marta Curtis" },
-    { id: 3, name: "Philip Tucker" },
-    { id: 4, name: "Christine Reid" },
+    { id: 1, name: "John" },
+    { id: 2, name: "Kelvin" },
+    { id: 3, name: "Rachel" },
+    { id: 4, name: "Precious" },
   ]);
   const [currentUser, setCurrentUser] = useState(users[0]);
 
   const [messages, setMessages] = useState({
-    1: [{ id: 1, text: "Hey Henry!", sender: "me", seen: true }],
-    2: [{ id: 1, text: "Hi Marta 👋", sender: "me", seen: false }],
-    3: [{ id: 1, text: "Philip, did you finish the project?", sender: "me", seen: false }],
-    4: [{ id: 1, text: "Hey Christine!", sender: "me", seen: false }],
+    1: [{ id: 1, text: "Hey John!", sender: "me", seen: true }],
+    2: [{ id: 1, text: "Hi Kelvin 👋", sender: "me", seen: false }],
+    3: [{ id: 1, text: "Kelvin, did you finish the project?", sender: "me", seen: false }],
+    4: [{ id: 1, text: "Hey Precious how are you doing!", sender: "me", seen: false }],
   });
 
   const [newMessage, setNewMessage] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
-  // Extract initials for avatars
-  const getInitials = (name) =>
+  const getInitials = (name) => 
     name
       .split(" ")
       .map((word) => word[0])
